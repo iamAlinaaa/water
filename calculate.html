@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- !! added type="text/javascript" for BUBBLES -->
+    <script src="script.js" type="text/javascript" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Water</title>
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg sticky glassy ">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-image">
+                <img src="water-drop.png" width="40%" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Drink water!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Your progress
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Calculate your water goal</a></li>
+                            <li><a class="dropdown-item" href="#">Remove your progress</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- SECTION WATER MENU -->
+    <section class="menu">
+        <div class="calculate-menu">
+            <form action=""></form>
+            <div class="calculate-box-1">
+                <div class="user-gender user-info">
+                    <label class="info-titles">Your Gender</label>
+                    <div class="form-check">
+                        <input type="radio" id="male" checked="checked" name="radio">
+                        <label class="gender-choose" for="male">Male</label>
+                        <input type="radio" id="female" name="radio">
+                        <label class="gender-choose" for="female">Female</label>
+                    </div>
+
+                </div>
+                <div class="user-age user-info">
+                    <label class="info-titles">Your Age</label>
+                    <input class="form-control" type="number">
+                </div>
+                <div class="user-height user-info">
+                    <label class="info-titles">Your Height (in cm)</label>
+                    <input class="form-control" type="number">
+                </div>
+                <div class="user-weight user-info">
+                    <label class="info-titles">Your Weight (in kg)</label>
+                    <input class="form-control" type="number">
+                </div>
+            </div>
+
+
+            <div class="calculate-box-2"></div>
+
+            </form>
+
+
+
+        </div>
+    </section>
+
+    <!-- SECTION WHITE AND WAVES -->
+    <section class="waves">
+
+        <!-- Create waves -->
+        <div class="wave" id="wave1" style="--i:1"></div>
+        <div class="wave" id="wave2" style="--i:2"></div>
+        <div class="wave" id="wave3" style="--i:3"></div>
+        <div class="wave" id="wave4" style="--i:4"></div>
+
+    </section>
+
+
+    <!-- This div is used for inner functional -->
+    <section class="under-water">
+        <div class="water-counter">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Dignissim diam quis enim lobortis. Donec ac odio tempor orci dapibus ultrices. Aenean
+            vel elit scelerisque mauris pellentesque pulvinar pellentesque. Pellentesque habitant morbi tristique
+            senectus et netus et. Eget arcu dictum varius duis at consectetur lorem. Sed turpis tincidunt id aliquet
+            risus. Fermentum odio eu feugiat pretium nibh ipsum. Duis ut diam quam nulla. Interdum posuere lorem ipsum
+            dolor sit amet consectetur. Nulla porttitor massa id neque aliquam. Morbi blandit cursus risus at. Fames ac
+            turpis egestas sed tempus urna et pharetra pharetra. Pharetra sit amet aliquam id diam maecenas ultricies
+            mi. Non blandit massa enim nec dui nunc mattis enim.
+            Nunc mattis enim ut tellus elementum sagittis vitae. Nibh tortor id aliquet lectus proin nibh nisl
+            condimentum id. Lectus sit amet est placerat in. Amet mattis vulputate enim nulla aliquet porttitor. Enim
+            blandit volutpat maecenas volutpat blandit aliquam etiam erat. Lectus proin nibh nisl condimentum id. In hac
+            habitasse platea dictumst quisque sagittis purus sit amet. Enim eu turpis egestas pretium aenean. Morbi
+            tristique senectus et netus et malesuada. Ut faucibus pulvinar elementum integer enim neque volutpat ac.
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="contacts" class="footer-copyright">
+
+        <a class="footer-link" href="https://twitter.com/"><i class="fab fa-twitter fa-lg"></i></a>
+        <a class="footer-link" href="https://github.com/iamAlinaaa"><i class="fab fa-github-square fa-lg"></i></a>
+        <a class="footer-link" href="mailto:my@mail"><i class="fas fa-envelope fa-lg"></i></a>
+
+
+        <p class="footer-paraghraph">© Copyright 2022 IamAlinaaa</p>
+
+    </footer>
+
+
+</body>
+
+</html>
