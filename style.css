@@ -404,7 +404,7 @@ section.waves {
     left: 0;
     width: 100%;
     height: 100px;
-    background-image: url(../wave2.png);
+    background-image: url(wave2.png);
     /* AND backgroung is being REPEATED thta's why it moves on the X Axis */
     background-size: 1000px 100px;
     /* creating animation "animate */
