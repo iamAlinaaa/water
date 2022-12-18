@@ -19,13 +19,18 @@ body {
 :root {
 
     --boxColor: white;
-    --waterFColor: #4D6DE3;
-    --waterBColor: #C7EEFF;
+    --waterFColor: #58a7e6;
+    --waterBColor: #d7eaf9;
     --percentShadow:
-        -2px -2px 0 rgba(72, 107, 177, 0.7),
-        2px -2px 0 rgba(72, 107, 177, 0.7),
-        -2px 2px 0 rgba(72, 107, 177, 0.7),
-        2px 2px 0 rgba(72, 107, 177, 0.7);
+        -2px -2px 0 rgba(30, 128, 205, 0.6),
+        2px -2px 0 rgba(30, 128, 205, 0.6),
+        -2px 2px 0 rgba(30, 128, 205, 0.6),
+        2px 2px 0 rgba(30, 128, 205, 0.6);
+
+    --mainTextColorLighter: rgba(30, 128, 205, 0.2);
+    --mainTextColor: rgba(30, 128, 205, 0.6);
+    --mainTextColorDarker: rgba(30, 128, 205, 0.9);
+
 }
 
 .box {
@@ -103,8 +108,6 @@ body {
 /* /////////////////////////////////////////////////////////// */
 
 
-
-
 /* NAVBAR */
 
 .sticky {
@@ -115,8 +118,8 @@ body {
 
 .glassy {
     z-index: 1002;
-    background: rgba(233, 231, 248, 0.15);
-    box-shadow: 0 2px 40px 0 rgba(52, 68, 158, 0.37);
+    /* background: rgba(233, 231, 248, 0.15); */
+    box-shadow: 0 2px 40px 0 rgba(52, 68, 158, 0.1);
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid rgba(203, 209, 240, 0.18);
@@ -133,6 +136,27 @@ body {
 .nav-item {
     padding: 0 18px;
 }
+
+.nav-link {
+    color: var(--mainTextColor);
+}
+
+.dropdown-item {
+    color: var(--mainTextColor);
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--mainTextColorDarker);
+}
+
+.dropdown-item:hover,
+.dropdown-item:active {
+    color: var(--mainTextColorDarker);
+    background-color: var(--mainTextColorLighter);
+}
+
+
 
 .navbar-nav {
     padding-left: 20px;
@@ -154,11 +178,11 @@ section.menu {
 
 .water-menu {
     /* Glass effect */
-    background: rgba(233, 231, 248, 0.5);
-    box-shadow: 0 2px 40px 0 rgba(52, 68, 158, 0.37);
+    background: rgba(215, 234, 249, 0.2);
+    box-shadow: 0 2px 40px 0 rgba(129, 190, 237, 0.3);
     backdrop-filter: blur(1.5px);
     -webkit-backdrop-filter: blur(1.5px);
-    border: 1px solid rgba(203, 209, 240, 0.18);
+    border: 1px solid rgba(129, 190, 237, 0.18);
     border-radius: 20px;
 
 
@@ -182,17 +206,17 @@ section.menu {
 .remained {
     text-align: center;
     font-family: "Ubuntu", sans-serif;
-    color: rgba(72, 107, 177, 0.78);
+    color: var(--mainTextColor);
     margin-top: 10px;
     margin-bottom: 40px;
 }
 
 .big-cup {
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(30, 128, 205, 0.4);
     background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
 
-    border: 5px solid rgba(72, 107, 177, 0.48);
+    border: 5px solid rgba(30, 128, 205, 0.5);
     position: absolute;
 
     height: 300px;
@@ -208,11 +232,11 @@ section.menu {
 
 .water-inside {
 
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(30, 128, 205, 0.1);
 
     /* border-radius: 10px;  */
     background: rgba(255, 255, 255, 0.4);
-    border: 5px solid rgba(72, 107, 177, 0.48);
+    border: 5px solid rgba(30, 128, 205, 0.1);
     position: absolute;
 
     height: 300px;
@@ -245,12 +269,12 @@ section.menu {
 .goal h1,
 .goal h3 {
     font-family: "Ubuntu", sans-serif;
-    color: rgba(72, 107, 177, 0.78);
+    color: var(--mainTextColor);
     text-align: center;
 }
 
 .drink-water {
-    text-align: center;   
+    text-align: center;
 }
 
 /*  END SECTION WATER MENU  */
@@ -315,20 +339,20 @@ section.menu {
 .carousel-control-next-icon:after {
     content: '>';
     font-size: 55px;
-    color: rgba(72, 107, 177, 0.78);
+    color: var(--mainTextColor);
 }
 
 .carousel-control-prev-icon:after {
     content: '<';
     font-size: 55px;
-    color: rgba(72, 107, 177, 0.78);
+    color: var(--mainTextColor);
 }
 
 /* end arrows */
 
 /* button-select */
 
-.button-select {
+.buttons-select {
     position: absolute;
     bottom: 30px;
     right: 135px;
@@ -340,14 +364,14 @@ section.menu {
     height: 50px;
     font-weight: 900;
     font-size: 1.5rem;
-    border: 2px solid rgba(72, 107, 177, 0.78);
-    color: rgba(72, 107, 177, 0.78);
+    border: 2px solid var(--mainTextColor);
+    color: var(--mainTextColor);
     border-radius: 10px;
     background: transparent;
 }
 
 .btn-select:hover {
-    background-color: rgba(72, 107, 177, 0.28);
+    background-color: rgba(30, 128, 205, 0.2);
 }
 
 .btn-select:active {
@@ -380,7 +404,7 @@ section.waves {
     left: 0;
     width: 100%;
     height: 100px;
-    background-image: url(wave2.png);
+    background-image: url(../images/wave2.png);
     /* AND backgroung is being REPEATED thta's why it moves on the X Axis */
     background-size: 1000px 100px;
     /* creating animation "animate */
@@ -390,7 +414,7 @@ section.waves {
     animation-delay: calc(var(--i) * 0.25s);
     opacity: 0.5;
 
-    
+
 }
 
 
@@ -448,6 +472,9 @@ section.waves {
 
 
 /* END OF WAVES SECTION  */
+/* ////////////////////////////////// */
+
+/* UNDER WATER SECTION */
 
 .under-water {
     position: relative;
@@ -513,14 +540,17 @@ section.waves {
     /* padding: 300px; */
     padding: 33vh;
     opacity: 1;
-    background-image: linear-gradient(180deg, #D6E6F2, #bfd6e7, #a1c2d6);
-
+    /* background-image: linear-gradient(180deg, #D6E6F2, #bfd6e7, #a1c2d6); */
+    /* background-image: linear-gradient(180deg, #97caf1, #97caf1, #77baed); */
+    background-image: linear-gradient(180deg, #d7eaf9, #d7eaf9, #acd4f3);
 }
 
-/* Footer */
+/* ////////////////////////////////// */
+
+/* FOOTER */
 
 .footer-copyright {
-    background-color: #a1c2d6;
+    background-color: #acd4f3;
     padding: 7% 0 2% 0;
     text-align: center;
 }
@@ -540,6 +570,8 @@ section.waves {
     padding: 0.75rem;
 }
 
+/* ///////////////////////////////////////// */
+
 
 /* CALCULATE DAILY WATER */
 
@@ -552,13 +584,12 @@ section.waves {
     border: 1px solid rgba(203, 209, 240, 0.18);
     border-radius: 20px;
 
-
     display: inline-flex;
     width: 800px;
     max-width: 800px;
     height: 450px;
     max-height: 450px;
-    padding:0 20px;
+    padding: 0 20px;
     justify-content: center;
     align-items: center;
     z-index: 1001;
@@ -566,75 +597,60 @@ section.waves {
 
 }
 
-
-
-/* //////////////////////////////////// */
-
-.calculate-box-1{
+.calculate-box-1 {
     width: 100%;
     height: 100%;
-    padding: 30px 20px 30px 50px;
+    padding: 25px 20px 30px 50px;
 }
 
-label.gender-choose{
+label.gender-choose {
     user-select: none;
-  }
+}
 
 .form-check {
     padding-left: 0px;
 }
 
-  input[type="radio"] {
+input[type="radio"] {
     /* displays circle radio button */
     display: none;
-  }
-  
-  input[type="radio"] + .gender-choose {
+}
+
+input[type="radio"]+.gender-choose {
     z-index: 10;
     margin: 0 10px 0 0;
     position: relative;
     color: #afc0d1;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: transparent;
     border: 2px solid #ced4da;
     cursor: pointer;
     transition: all 200ms ease;
-  }
-  
-input[type="radio"]:checked + .gender-choose {
+}
+
+input[type="radio"]:checked+.gender-choose {
     border: 2px solid rgba(72, 107, 177, 0.78);
     color: rgba(72, 107, 177, 0.78);
     background-color: rgba(72, 107, 177, 0.28);
 }
 
 
-input[type="radio"] + .gender-choose:active {
+input[type="radio"]+.gender-choose:active {
 
     transform: scale(.9);
     box-shadow: 0 3px 15px -2px;
 }
 
-  
-input[type="radio"] + .gender-choose {
+
+input[type="radio"]+.gender-choose {
     padding: 5px 20px;
     border-radius: 10px;
-  }
-  
-
-.calculate-box-2 {
-    width: 100%;
-    height: 100%;
-    background: url(images/cute-water-drop.png);
-    background-position: cover;
-    background-repeat: no-repeat;
-    opacity: 0.9;
-    padding: 20px;
-  }
+}
 
 .user-info {
-    padding: 10px 0;
-    position:relative;
+    padding: 5px 0;
+    position: relative;
     width: 280px;
 }
 
@@ -642,29 +658,29 @@ input[type="radio"] + .gender-choose {
     background-color: white;
     /* border: 0; */
     border: 2px rgba(72, 107, 177, 0.48) solid;
-    display:block;
+    display: block;
     width: 100%;
     font-size: 18px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: rgba(72, 107, 177, 0.78);
     border-radius: 10px;
 
 }
 
-/* REMOVE OUTLINE WHEN CLICKED */
-textarea:focus, 
-textarea.form-control:focus, 
-input.form-control:focus, 
-input[type=text]:focus, 
-input[type=password]:focus, 
-input[type=email]:focus, 
-input[type=number]:focus, 
-[type=text].form-control:focus, 
-[type=password].form-control:focus, 
-[type=email].form-control:focus, 
-[type=tel].form-control:focus, 
+/* INSIDE CALCULATE DAILY WATER (REMOVE BOOTSTRAP OUTLINE WHEN CLICKED) */
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
 [contenteditable].form-control:focus {
-  box-shadow: inset 0 -1px 0 #ddd;
+    box-shadow: inset 0 -1px 0 #ddd;
 }
 
 .user-info .form-control:focus {
@@ -675,5 +691,54 @@ input[type=number]:focus,
     font-size: 20px;
     color: rgba(72, 107, 177, 0.78);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    /* font-weight: bold; */
+}
+
+.btn-calculate {
+    margin: 12px 10px 0 0;
+    position: relative;
+    color: #afc0d1;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
     font-weight: bold;
+    cursor: pointer;
+    border: 2px solid rgba(72, 107, 177, 0.48);
+    color: rgba(72, 107, 177, 0.78);
+    background-color: rgba(72, 107, 177, 0.28);
+    border-radius: 10px;
+    padding: 5px 96px;
+    font-size: 20px;
+}
+
+.btn-calculate:hover,
+.btn-calculate:focus {
+    box-shadow: inset 0 -1px 0 rgba(72, 107, 177, 0.28);
+    border: 2px rgba(72, 107, 177, 0.78) solid;
+    color: rgba(72, 107, 177, 0.88);
+    background-color: rgba(72, 107, 177, 0.38);
+}
+
+.btn-calculate:active {
+    transform: scale(1.02);
+}
+
+
+/* //////////////////////////////////// */
+
+.calculate-box-2 {
+    width: 100%;
+    height: 100%;
+    padding: 25px 20px 20px 20px;
+    position: relative;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgba(72, 107, 177, 0.78);
+    font-size: 25px;
+}
+
+.btn-drink-water {
+    margin-top: 36px;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
 }
